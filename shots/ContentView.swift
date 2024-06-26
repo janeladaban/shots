@@ -15,7 +15,6 @@ struct ContentView: View {
                     Image(systemName: "wineglass")
                         .imageScale(.large)
                         .foregroundStyle(.tint)
-                        .padding(.bottom, 20)
                     
                     NavigationLink(destination: QuestionsView()) {
                         Text("Start taking shots!")
