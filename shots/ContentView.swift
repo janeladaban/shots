@@ -10,10 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, World!")
+            NavigationView {
+                VStack {
+                    Image(systemName: "wineglass")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                        .padding(.bottom, 20)
+                    
+                    NavigationLink(destination: QuestionsView()) {
+                        Text("Start taking shots!")
+                            .font(.title2)
+                    }
+                }
+            }
+            .navigationBarBackButtonHidden()
         }
         .padding()
     }
