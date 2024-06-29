@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var data = DataModel.data
+    
     var body: some View {
         HStack {
             NavigationView {
@@ -23,7 +25,7 @@ struct ContentView: View {
                     }
                     // button
                     NavigationLink {
-                        ShotsView()
+                        ShotsView(dataQuestions: $data)
                     } label: {
                         PrimaryButton(text: "Let's find out")
                     }

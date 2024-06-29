@@ -8,20 +8,10 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @Binding var dataQuestion: QuestionData
+    
     var body: some View {
         VStack(spacing: 60) {
-            // title
-            HStack {
-                Text("Number of Shots")
-                    .font(.headline)
-                    .foregroundColor(Color("AccentColor"))
-                Spacer()
-                // TODO: Replace and make it dynamic
-                Text("1 of 10")
-                    .font(.subheadline)
-                    .foregroundColor(Color("AccentColor"))
-            }
-            
             // TODO: Replace with a VStack that is centered in the screen
             Spacer()
             Spacer()
@@ -30,7 +20,7 @@ struct QuestionView: View {
             VStack(alignment: .center, spacing: 20) {
                 // texts
                 Text("The")
-                Text("number of countries you've been to ")
+                Text("\(dataQuestion.question)")
                     .font(.title3)
                     .bold()
                 Text("is the number of shots you'll take")
@@ -41,14 +31,9 @@ struct QuestionView: View {
                 Spacer()
             }
         }
-        .padding()
-        .foregroundColor(Color("AccentColor"))
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color("BackgroundColor"))
-        .navigationBarHidden(true)
     }
 }
 
 #Preview {
-    QuestionView()
+    QuestionView(dataQuestion: .constant(DataModel.testData[0]))
 }

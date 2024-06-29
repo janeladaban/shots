@@ -22,4 +22,6 @@ class DataModel: NSObject {
     static let testData: [QuestionData] = [
         QuestionData(id: 0, question: "are you cute or what?!")
     ]
+    
+    static var dataCounter: Int = 1
 }
