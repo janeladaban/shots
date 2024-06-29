@@ -16,12 +16,12 @@ class DataModel: NSObject {
     static let data: [QuestionData] = [
         QuestionData(id: 1, question: "countries you've been to"),
         QuestionData(id: 2, question: "siblings you have"),
-        QuestionData(id: 3, question: "tattos")
+        QuestionData(id: 3, question: "tattoos you have")
     ]
     
     static let testData: [QuestionData] = [
         QuestionData(id: 0, question: "are you cute or what?!")
     ]
     
-    static var dataCounter: Int = 1
+    public static var dataCounter: Int = 1
 }
