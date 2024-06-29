@@ -113,14 +113,14 @@
 		3FA1F07F2C2B6F4900A1CFF4 /* shots */ = {
 			isa = PBXGroup;
 			children = (
-				3FD79F7D2C2F5AE9004F45DA /* Views */,
-				3FD79F7A2C2F5A15004F45DA /* Components */,
-				3FA1F0802C2B6F4900A1CFF4 /* shotsApp.swift */,
 				3FA1F0842C2B6F4A00A1CFF4 /* Assets.xcassets */,
 				3FA1F0862C2B6F4A00A1CFF4 /* shots.entitlements */,
-				3FA1F0872C2B6F4A00A1CFF4 /* Preview Content */,
+				3FA1F0802C2B6F4900A1CFF4 /* shotsApp.swift */,
 				3FD79F7E2C2F5EF8004F45DA /* Extensions.swift */,
+				3FD79F7D2C2F5AE9004F45DA /* Views */,
+				3FD79F7A2C2F5A15004F45DA /* Components */,
 				3F3D634A2C3001E90095C0ED /* Models */,
+				3FA1F0872C2B6F4A00A1CFF4 /* Preview Content */,
 			);
 			path = shots;
 			sourceTree = "<group>";
