@@ -16,9 +16,13 @@ struct QuestionView: View {
                     .font(.headline)
                     .foregroundColor(Color("AccentColor"))
                 Spacer()
+                // TODO: Replace and make it dynamic
+                Text("1 of 10")
+                    .font(.subheadline)
+                    .foregroundColor(Color("AccentColor"))
             }
             
-            // TODO: Replace with a vstack that is centered in the screen
+            // TODO: Replace with a VStack that is centered in the screen
             Spacer()
             Spacer()
             
@@ -41,6 +45,7 @@ struct QuestionView: View {
         .foregroundColor(Color("AccentColor"))
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("BackgroundColor"))
+        .navigationBarHidden(true)
     }
 }
 
