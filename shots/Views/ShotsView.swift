@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ShotsView: View {
+    @State private var dataCounter = 0
+    @State private var isShowButton = true
     @Binding var dataQuestions: [QuestionData]
     
     var body: some View {
@@ -18,13 +20,39 @@ struct ShotsView: View {
                     .font(.headline)
                     .foregroundColor(Color("AccentColor"))
                 Spacer()
-                Text("\(DataModel.dataCounter) of \($dataQuestions.count)")
+                Text("\(dataCounter) of \(dataQuestions.count)") // TODO: Fix dataCounter and make it start at 1
                     .font(.subheadline)
                     .foregroundColor(Color("AccentColor"))
             }
             
-            // question
-            QuestionView(dataQuestion: $dataQuestions[0])
+            Spacer()
+            
+            VStack {
+                if isShowButton {
+                    Text("The")
+                    Text("\(dataQuestions[dataCounter].question)")
+                        .font(.title3)
+                        .bold()
+                    Text("is the number of shots you'll take")
+                    
+                    Button(action: {
+                        // Move to the next element, if not at the end
+                        if dataCounter < dataQuestions.count - 1 {
+                            dataCounter += 1
+                        } else {
+                            isShowButton = false
+                        }
+                    }) {
+                        PrimaryButton(text: "Next")
+                    }
+                } else {
+                    EndView()
+                }
+            }
+            
+            // TODO: Remove these spacers and center the VStack
+            Spacer()
+            Spacer()
         }
         .padding()
         .foregroundColor(Color("AccentColor"))
