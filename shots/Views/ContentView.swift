@@ -9,22 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            NavigationView {
-                VStack {
-                    Image(systemName: "wineglass")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    
-                    NavigationLink(destination: QuestionsView()) {
-                        Text("Start taking shots!")
-                            .font(.title2)
-                    }
-                }
+        VStack(spacing: 40) {
+            VStack(spacing: 20) {
+                // title
+                Text("Number of Shots")
+                    .extensionTitle()
+
+                // subtitle
+                Text("How well do you know your drinking buddies?")
+                    .foregroundColor(Color("AccentColor"))
             }
-            .navigationBarBackButtonHidden()
+            // button
+            PrimaryButton(text: "Let's find out")
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
+        .background(Color("BackgroundColor"))
     }
 }
 
