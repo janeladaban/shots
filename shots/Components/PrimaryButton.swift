@@ -13,7 +13,7 @@ struct PrimaryButton: View {
     
     var body: some View {
         Text(text)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding()
             .padding(.horizontal)
             .background(background)
