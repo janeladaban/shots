@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3D63492C30008F0095C0ED /* ShotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D63482C30008F0095C0ED /* ShotsView.swift */; };
+		3F3D634C2C3002000095C0ED /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D634B2C3002000095C0ED /* Questions.swift */; };
 		3FA1F0812C2B6F4900A1CFF4 /* shotsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1F0802C2B6F4900A1CFF4 /* shotsApp.swift */; };
 		3FA1F0832C2B6F4900A1CFF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1F0822C2B6F4900A1CFF4 /* ContentView.swift */; };
 		3FA1F0852C2B6F4A00A1CFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA1F0842C2B6F4A00A1CFF4 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F3D63482C30008F0095C0ED /* ShotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShotsView.swift; sourceTree = "<group>"; };
+		3F3D634B2C3002000095C0ED /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3FA1F07D2C2B6F4900A1CFF4 /* shots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA1F0802C2B6F4900A1CFF4 /* shotsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shotsApp.swift; sourceTree = "<group>"; };
 		3FA1F0822C2B6F4900A1CFF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,10 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F3D634A2C3001E90095C0ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F3D634B2C3002000095C0ED /* Questions.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3FA1F0742C2B6F4900A1CFF4 = {
 			isa = PBXGroup;
 			children = (
 				3FA1F07F2C2B6F4900A1CFF4 /* shots */,
+				3F3D634A2C3001E90095C0ED /* Models */,
 				3FA1F0912C2B6F4A00A1CFF4 /* shotsTests */,
 				3FA1F09B2C2B6F4A00A1CFF4 /* shotsUITests */,
 				3FA1F07E2C2B6F4900A1CFF4 /* Products */,
@@ -150,6 +163,7 @@
 			children = (
 				3FA1F0822C2B6F4900A1CFF4 /* ContentView.swift */,
 				3FD79F802C2F5FA9004F45DA /* QuestionView.swift */,
+				3F3D63482C30008F0095C0ED /* ShotsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,7 +301,9 @@
 				3FD79F812C2F5FA9004F45DA /* QuestionView.swift in Sources */,
 				3FA1F0832C2B6F4900A1CFF4 /* ContentView.swift in Sources */,
 				3FA1F0812C2B6F4900A1CFF4 /* shotsApp.swift in Sources */,
+				3F3D634C2C3002000095C0ED /* Questions.swift in Sources */,
 				3FD79F7C2C2F5A2E004F45DA /* PrimaryButton.swift in Sources */,
+				3F3D63492C30008F0095C0ED /* ShotsView.swift in Sources */,
 				3FD79F7F2C2F5EF8004F45DA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,8 +476,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -470,10 +485,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.janeladaban.shots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -498,8 +514,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -508,10 +523,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.janeladaban.shots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
