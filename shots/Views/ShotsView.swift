@@ -26,11 +26,13 @@ struct ShotsView: View {
                     .foregroundColor(Color("AccentColor"))
             }
             
+            // TODO: Remove these spacers and center the VStack
             Spacer()
             
-            VStack {
+            VStack(spacing: 20) {
                 if isShowButton {
-                    Text("The")
+                    Text("The number of")
+                    // TODO: Fetch the questions in random order
                     Text("\(dataQuestions[dataCounter].question)")
                         .font(.title3)
                         .bold()
