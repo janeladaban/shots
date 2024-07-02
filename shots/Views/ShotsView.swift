@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShotsView: View {
     @State private var dataCounter = 0
+    @State private var displayCount = 1
     @State private var isShowButton = true
     @Binding var dataQuestions: [QuestionData]
     
@@ -20,7 +21,7 @@ struct ShotsView: View {
                     .font(.headline)
                     .foregroundColor(Color("AccentColor"))
                 Spacer()
-                Text("\(dataCounter) of \(dataQuestions.count)") // TODO: Fix dataCounter and make it start at 1
+                Text("\(displayCount) of \(dataQuestions.count)")
                     .font(.subheadline)
                     .foregroundColor(Color("AccentColor"))
             }
@@ -39,6 +40,7 @@ struct ShotsView: View {
                         // Move to the next element, if not at the end
                         if dataCounter < dataQuestions.count - 1 {
                             dataCounter += 1
+                            displayCount += 1
                         } else {
                             isShowButton = false
                         }
