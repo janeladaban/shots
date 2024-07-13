@@ -18,7 +18,13 @@ Number of Shots was born one night while my friends and I were hanging out. We h
 * This mini project is purely for educational purposes. As a curious cat, I work on this in my free time.
 * Use this code at your own risk. The authors are not responsible for any damage or loss that may occur through its use.
 
----
+<br />
 
-_Happy drinking and getting to know each other better! Cheers!_ 🥂
 
+**Demo**
+
+https://github.com/user-attachments/assets/ab22806f-46fb-4e99-94d7-c149cfa89018
+
+<br />
+
+Happy drinking and getting to know each other better! Cheers! 🥂
