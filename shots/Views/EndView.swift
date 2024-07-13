@@ -11,7 +11,7 @@ struct EndView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("Thanks for playing **Number of Shots!**")
+            Text("Thanks for playing **Number of Shots**!")
             Text("This code lives in")
             Link(destination: URL(string: "https://github.com/janeladaban/shots")!, 
                  label: {
