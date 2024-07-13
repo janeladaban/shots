@@ -12,6 +12,8 @@ struct QuestionData: Identifiable, Hashable {
     var question: String
 }
 
+// TODO: Use API to fetch data like these
+
 class DataModel: NSObject {
     static let data: [QuestionData] = [
         QuestionData(id: 1, question: "countries you've been to"),

@@ -29,7 +29,8 @@ struct ShotsView: View {
             VStack(spacing: 20) {
                 if hasNext {
                     Text("The number of")
-                    Text("\(dataQuestions[dataCounter].question)").extensionQuestion() // TODO: Fetch the questions in random order
+                    // TODO: Fetch the questions in random order
+                    Text("\(dataQuestions[dataCounter].question)").extensionQuestion()
                     Text("is the number of shots you'll take")
                     
                     Button(action: {
@@ -47,6 +48,7 @@ struct ShotsView: View {
                 }
             }
             
+            // TODO: Remove spacers and use a better formatting method
             Spacer()
             Spacer()
         }
