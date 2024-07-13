@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct EndView: View {
+    
     var body: some View {
-        VStack(spacing: 60) {
-            Text("Hello, world!") // TODO: Work on EndView
+        VStack {
+            Text("Thanks for playing Number of Shots!")
+                .extensionQuestion()
         }
     }
 }
