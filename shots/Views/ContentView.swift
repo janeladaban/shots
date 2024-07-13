@@ -36,16 +36,30 @@ struct ContentView: View {
                     Button("How to Play", systemImage: "info.circle") {
                         isShow = true
                     }
-                    // TODO: Change the background color of the sheet
-                    // TODO: Add instructions
+
                     .sheet(isPresented: $isShow) {
                         VStack(spacing: 40) {
                             Text("How to play Number of Shots")
+                                .extensionQuestion()
                             
+                            Text("""
+                            1. Begin with the wisest (eldest) among us.
+                            2. Tap on "Let's find out" button.
+                            3. Read out the prompt for all to hear.
+                            4. Take your shots like a champion!
+                            5. Share your tales and let them in on your secrets.
+                            6. Pass the torch to the right-hand comrade.
+                            7. Repeat until everyone knows a little more about everyone.
+                            """)
+                                                        
                             Button("Dismiss") {
                                 isShow = false
                             }
+                            
+                            .presentationDetents([ .medium, .medium])
+                            .presentationBackground(.thinMaterial)
                         }
+                        .padding()
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
