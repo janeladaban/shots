@@ -15,7 +15,18 @@ extension Text {
             .foregroundColor(Color("AccentColor"))
     }
     
-//    func extensionSubtitle() -> some View {
-//        
-//    }
+    func extensionHeaderTitle() -> some View {
+        self.font(.headline)
+            .foregroundColor(Color("AccentColor"))
+    }
+    
+    func extensionHeaderCount() -> some View {
+            self.font(.subheadline)
+            .foregroundColor(Color("AccentColor"))
+    }
+    
+    func extensionQuestion() -> some View {
+        self.font(.title3)
+            .bold()
+    }
 }
