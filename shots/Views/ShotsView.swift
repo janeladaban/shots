@@ -10,41 +10,34 @@ import SwiftUI
 struct ShotsView: View {
     @State private var dataCounter = 0
     @State private var displayCount = 1
-    @State private var isShowButton = true
+    @State private var hasNext = true
     @Binding var dataQuestions: [QuestionData]
-    
+        
     var body: some View {
         VStack {
-            // title
+            // header
             HStack {
                 Text("Number of Shots")
-                    .font(.headline)
-                    .foregroundColor(Color("AccentColor"))
+                    .extensionHeaderTitle()
                 Spacer()
                 Text("\(displayCount) of \(dataQuestions.count)")
-                    .font(.subheadline)
-                    .foregroundColor(Color("AccentColor"))
+                    .extensionHeaderCount()
             }
             
-            // TODO: Remove these spacers and center the VStack
             Spacer()
             
             VStack(spacing: 20) {
-                if isShowButton {
+                if hasNext {
                     Text("The number of")
-                    // TODO: Fetch the questions in random order
-                    Text("\(dataQuestions[dataCounter].question)")
-                        .font(.title3)
-                        .bold()
+                    Text("\(dataQuestions[dataCounter].question)").extensionQuestion() // TODO: Fetch the questions in random order
                     Text("is the number of shots you'll take")
                     
                     Button(action: {
-                        // Move to the next element, if not at the end
-                        if dataCounter < dataQuestions.count - 1 {
+                        if dataCounter < (dataQuestions.count - 1) {
                             dataCounter += 1
                             displayCount += 1
                         } else {
-                            isShowButton = false
+                            hasNext = false
                         }
                     }) {
                         PrimaryButton(text: "Next")
@@ -54,7 +47,6 @@ struct ShotsView: View {
                 }
             }
             
-            // TODO: Remove these spacers and center the VStack
             Spacer()
             Spacer()
         }
